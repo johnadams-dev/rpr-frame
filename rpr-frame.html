@@ -6,8 +6,10 @@
   <meta name="robots" content="noindex">
   <title>RPR estimate</title>
   <style>
-    /* Framed (sandboxed, no same-origin) by the Market Update report's Property
-       Valuation page. RPR's widget writes its own markup here. */
+    /* Served from rpr.johnadams.org (its own origin, so RPR's script never sees
+       johnadams.org's localStorage) and framed by the Market Update report's
+       RPR page. RPR's widget writes its own markup here. It needs a Referer,
+       which a sandbox without allow-same-origin doesn't send. */
     html, body { margin: 0; background: #fff; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; }
     img { max-width: 100%; height: auto; }
     .note { color: #666; margin: 8px 0; }
